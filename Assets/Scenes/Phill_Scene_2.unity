@@ -15106,6 +15106,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RangedEnemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1425068622826829396, guid: 03f549687826f3d46997eff8118f6db9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5480558030261788861, guid: 03f549687826f3d46997eff8118f6db9, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.094415575
@@ -16224,6 +16228,10 @@ PrefabInstance:
     - target: {fileID: 1425068622826829396, guid: 03f549687826f3d46997eff8118f6db9, type: 3}
       propertyPath: m_Name
       value: RangedEnemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425068622826829396, guid: 03f549687826f3d46997eff8118f6db9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5480558030261788861, guid: 03f549687826f3d46997eff8118f6db9, type: 3}
       propertyPath: m_LocalScale.x
@@ -27873,6 +27881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RangedEnemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1425068622826829396, guid: 03f549687826f3d46997eff8118f6db9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5480558030261788861, guid: 03f549687826f3d46997eff8118f6db9, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.094415575
@@ -30618,6 +30630,10 @@ PrefabInstance:
     - target: {fileID: 1425068622826829396, guid: caae34c5acf9a174b8b2f80bd47e5a6b, type: 3}
       propertyPath: m_Name
       value: MeleeEnemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425068622826829396, guid: caae34c5acf9a174b8b2f80bd47e5a6b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5480558030261788861, guid: caae34c5acf9a174b8b2f80bd47e5a6b, type: 3}
       propertyPath: m_LocalScale.x
@@ -99904,6 +99920,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RangedEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1425068622826829396, guid: 03f549687826f3d46997eff8118f6db9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5480558030261788861, guid: 03f549687826f3d46997eff8118f6db9, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.094415575
@@ -106012,6 +106032,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeleeEnemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1425068622826829396, guid: caae34c5acf9a174b8b2f80bd47e5a6b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5480558030261788861, guid: caae34c5acf9a174b8b2f80bd47e5a6b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.094415575
@@ -112073,6 +112097,10 @@ PrefabInstance:
     - target: {fileID: 1425068622826829396, guid: caae34c5acf9a174b8b2f80bd47e5a6b, type: 3}
       propertyPath: m_Name
       value: MeleeEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425068622826829396, guid: caae34c5acf9a174b8b2f80bd47e5a6b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5480558030261788861, guid: caae34c5acf9a174b8b2f80bd47e5a6b, type: 3}
       propertyPath: m_LocalScale.x
@@ -127683,6 +127711,10 @@ PrefabInstance:
     - target: {fileID: 1425068622826829396, guid: caae34c5acf9a174b8b2f80bd47e5a6b, type: 3}
       propertyPath: m_Name
       value: MeleeEnemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425068622826829396, guid: caae34c5acf9a174b8b2f80bd47e5a6b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5480558030261788861, guid: caae34c5acf9a174b8b2f80bd47e5a6b, type: 3}
       propertyPath: m_LocalScale.x
