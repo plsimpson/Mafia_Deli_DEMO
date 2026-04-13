@@ -20,7 +20,7 @@ public class PlayerScript : MonoBehaviour
         characterController.Move(new Vector3(moveInput.x, 0, moveInput.y) * Time.deltaTime * 5f);
         if (playerInput.actions["Jump"].triggered)
         {
-           // EnterStation();
+           //  EnterStation();
         }
     }
 
