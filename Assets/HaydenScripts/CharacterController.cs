@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float mouseSensitivity = 0.1f;
 
     public Transform cameraTransform;
+    public CharacterController cc;
 
     private Vector2 moveInput;
     private Vector2 lookInput;
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
     }
 
+
     void HandleLook()
     {
         float mouseX = lookInput.x * mouseSensitivity;
@@ -51,6 +53,6 @@ public class PlayerController : MonoBehaviour
     void HandleMovement()
     {
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
-        transform.Translate(move * speed * Time.deltaTime, Space.World);
+        cc.Move(move * speed * Time.deltaTime);
     }
 }
