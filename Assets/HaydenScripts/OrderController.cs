@@ -6,7 +6,7 @@ public class OrderController : MonoBehaviour
 {
     [SerializeField] private List<Sandwich> SandwichOptions = new List<Sandwich>();
     [SerializeField] private Sandwich activeOrder;
-    [SerializeField] private List<Ingredient> beingBuilt = new List<Ingredient>();
+    public List<Ingredient> beingBuilt = new List<Ingredient>();
     [SerializeField] TMP_Text text;
 
     private void Start()
