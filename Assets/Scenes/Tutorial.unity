@@ -36155,9 +36155,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 516102850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b52e41771c0df6040a27469dc65f9a51, type: 3}
+  m_Script: {fileID: 11500000, guid: 75a9f4acca0b79a41a4bac6100c85005, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IngredientComp
+  m_EditorClassIdentifier: Assembly-CSharp::TUTIngredientComp1
   ingredient: 5
 --- !u!43 &530809225
 Mesh:
@@ -38858,9 +38858,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 560250003}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b52e41771c0df6040a27469dc65f9a51, type: 3}
+  m_Script: {fileID: 11500000, guid: 75a9f4acca0b79a41a4bac6100c85005, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IngredientComp
+  m_EditorClassIdentifier: Assembly-CSharp::TUTIngredientComp1
   ingredient: 3
 --- !u!1001 &569076942
 PrefabInstance:
@@ -70910,9 +70910,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1070796988}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b52e41771c0df6040a27469dc65f9a51, type: 3}
+  m_Script: {fileID: 11500000, guid: 75a9f4acca0b79a41a4bac6100c85005, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IngredientComp
+  m_EditorClassIdentifier: Assembly-CSharp::TUTIngredientComp1
   ingredient: 1
 --- !u!1001 &1072887972
 PrefabInstance:
@@ -72583,7 +72583,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3062712270440619865, guid: 705134545464a0f4db33131992067103, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1112134174}
+      addedObject: {fileID: 1112134177}
   m_SourcePrefab: {fileID: 100100000, guid: 705134545464a0f4db33131992067103, type: 3}
 --- !u!4 &1112134172 stripped
 Transform:
@@ -72595,7 +72595,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3062712270440619865, guid: 705134545464a0f4db33131992067103, type: 3}
   m_PrefabInstance: {fileID: 1112134171}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1112134174
+--- !u!114 &1112134177
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72604,9 +72604,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1112134173}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4940d6fdaf9b954db2255824376b5c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a0071b565dc8554a966c9d4a82ce35f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VisualizedIngredients
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialIngredients
   Ham: {fileID: 239978917}
   Salami: {fileID: 559943455}
   Gabagool: {fileID: 1474079318}
@@ -72617,7 +72617,7 @@ MonoBehaviour:
   Onion: {fileID: 2024740508}
   Mustard: {fileID: 159711070}
   Mayo: {fileID: 1576787646}
-  OrderController: {fileID: 0}
+  Tutorial: {fileID: 1910902723}
 --- !u!1 &1133198408
 GameObject:
   m_ObjectHideFlags: 0
@@ -78254,9 +78254,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1247070734}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b52e41771c0df6040a27469dc65f9a51, type: 3}
+  m_Script: {fileID: 11500000, guid: 75a9f4acca0b79a41a4bac6100c85005, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IngredientComp
+  m_EditorClassIdentifier: Assembly-CSharp::TUTIngredientComp1
   ingredient: 4
 --- !u!1001 &1251496558
 PrefabInstance:
@@ -100647,9 +100647,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1504756020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b52e41771c0df6040a27469dc65f9a51, type: 3}
+  m_Script: {fileID: 11500000, guid: 75a9f4acca0b79a41a4bac6100c85005, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IngredientComp
+  m_EditorClassIdentifier: Assembly-CSharp::TUTIngredientComp1
   ingredient: 0
 --- !u!1001 &1505934026
 PrefabInstance:
@@ -107599,9 +107599,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1649129694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b52e41771c0df6040a27469dc65f9a51, type: 3}
+  m_Script: {fileID: 11500000, guid: 75a9f4acca0b79a41a4bac6100c85005, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IngredientComp
+  m_EditorClassIdentifier: Assembly-CSharp::TUTIngredientComp1
   ingredient: 7
 --- !u!1001 &1649500255
 PrefabInstance:
@@ -122068,6 +122068,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1928796896557271501, guid: 4a5456cdcaae5a04fa9ed5eaa6800e1f, type: 3}
   m_PrefabInstance: {fileID: 1905909942}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1910902723 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8826801471315127729, guid: 8f45d06cb51fb604bbf9bb03c78998e7, type: 3}
+  m_PrefabInstance: {fileID: 2156431508541867467}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b8135412bc14243945b490f2c53033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tutorial
 --- !u!1 &1911163566
 GameObject:
   m_ObjectHideFlags: 0
@@ -126237,9 +126248,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1961660441}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b52e41771c0df6040a27469dc65f9a51, type: 3}
+  m_Script: {fileID: 11500000, guid: 75a9f4acca0b79a41a4bac6100c85005, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IngredientComp
+  m_EditorClassIdentifier: Assembly-CSharp::TUTIngredientComp1
   ingredient: 2
 --- !u!1 &1963703460
 GameObject:
@@ -126318,9 +126329,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1963703460}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b52e41771c0df6040a27469dc65f9a51, type: 3}
+  m_Script: {fileID: 11500000, guid: 75a9f4acca0b79a41a4bac6100c85005, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IngredientComp
+  m_EditorClassIdentifier: Assembly-CSharp::TUTIngredientComp1
   ingredient: 6
 --- !u!1 &1964067991
 GameObject:
@@ -142563,7 +142574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5294952221970988065, guid: 8f45d06cb51fb604bbf9bb03c78998e7, type: 3}
       propertyPath: m_Name
-      value: OrderController
+      value: Tutorial
       objectReference: {fileID: 0}
     - target: {fileID: 8826801471315127729, guid: 8f45d06cb51fb604bbf9bb03c78998e7, type: 3}
       propertyPath: text

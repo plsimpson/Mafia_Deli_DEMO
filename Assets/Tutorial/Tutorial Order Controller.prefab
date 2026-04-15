@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 98825075372946012}
   - component: {fileID: 8826801471315127729}
   m_Layer: 0
-  m_Name: Tutorial Orderr Controller
+  m_Name: Tutorial Order Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
