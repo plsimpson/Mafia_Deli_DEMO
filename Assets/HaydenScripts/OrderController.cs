@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OrderController : MonoBehaviour
 {
-    [SerializeField] private List<Sandwich> SandwichOptions = new List<Sandwich>();
+    public List<Sandwich> SandwichOptions = new List<Sandwich>();
     [SerializeField] private Sandwich activeOrder;
     public List<Ingredient> beingBuilt = new List<Ingredient>();
     [SerializeField] TMP_Text text;
@@ -17,7 +17,7 @@ public class OrderController : MonoBehaviour
     private void NewOrder()
     {
         activeOrder = SandwichOptions[0];
-        string s = "Order:\n:";
+        string s = "Order:\n";
         foreach (Ingredient ing in activeOrder.Ingredients)
         {
             s += " - " + ing + "\n";
