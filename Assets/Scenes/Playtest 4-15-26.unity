@@ -32356,6 +32356,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Heater (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8354605738710675445, guid: 708faea70e0a35c4f895785050e0790b, type: 3}
+      propertyPath: m_TagString
+      value: Counter
+      objectReference: {fileID: 0}
     - target: {fileID: 8699359136036058447, guid: 708faea70e0a35c4f895785050e0790b, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -92314,6 +92318,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8158876301931766383, guid: 8c31604f61cdc3e4288c7e7dfe0e4e08, type: 3}
+      propertyPath: m_TagString
+      value: Counter
+      objectReference: {fileID: 0}
     - target: {fileID: 8823104072678553813, guid: 8c31604f61cdc3e4288c7e7dfe0e4e08, type: 3}
       propertyPath: m_LocalScale.x
       value: -2
@@ -101879,6 +101887,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_Heater
       objectReference: {fileID: 0}
+    - target: {fileID: 8354605738710675445, guid: 708faea70e0a35c4f895785050e0790b, type: 3}
+      propertyPath: m_TagString
+      value: Counter
+      objectReference: {fileID: 0}
     - target: {fileID: 8699359136036058447, guid: 708faea70e0a35c4f895785050e0790b, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -104391,6 +104403,51 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &1841375450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1841375452}
+  - component: {fileID: 1841375451}
+  m_Layer: 0
+  m_Name: LoadDeliBuilder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1841375451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841375450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a434538768b414dabfc6525e8c6830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DemoLoadSceneOnRaycastHitCounter
+  sceneName: DeliBuilderScene
+--- !u!4 &1841375452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841375450}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.29389, y: 2.27391, z: -3.34017}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1844344046
 GameObject:
   m_ObjectHideFlags: 0
@@ -130074,3 +130131,4 @@ SceneRoots:
   - {fileID: 1188727294}
   - {fileID: 140319527}
   - {fileID: 1401028577}
+  - {fileID: 1841375452}
