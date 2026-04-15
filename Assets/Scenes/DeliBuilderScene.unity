@@ -7702,7 +7702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Active Order
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7768,7 +7768,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 49.652325, y: -24.5141, z: 50.101204, w: -24.930313}
+  m_margin: {x: 49.652325, y: -9.364105, z: 50.101204, w: -24.930313}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -21273,14 +21273,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.11764706}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2da116eef7e432845934013ceab5e546, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -35843,6 +35843,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 266504212122689730, guid: 5ee69789922de4c42a2438b08a155332, type: 3}
   m_PrefabInstance: {fileID: 509813338}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &511096060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 511096062}
+  - component: {fileID: 511096061}
+  m_Layer: 0
+  m_Name: LoadSceneOnOrdersComplete
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &511096061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511096060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d11a4165403c6bb4ba77250a77d4575e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DemoLoadSceneOnOrdersComplete
+  sceneName: Playtest 4-8
+  OrderController: {fileID: 1559498677}
+--- !u!4 &511096062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511096060}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.11921, y: 2.08429, z: -2.76286}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &514865171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -142418,6 +142464,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 410087041}
   - {fileID: 832575519}
+  - {fileID: 815818900}
   - {fileID: 1198350227}
   - {fileID: 1286395035}
   - {fileID: 1893276650}
@@ -142428,5 +142475,5 @@ SceneRoots:
   - {fileID: 1221757676}
   - {fileID: 1667909868}
   - {fileID: 1559498678}
-  - {fileID: 815818900}
   - {fileID: 1019070726}
+  - {fileID: 511096062}
