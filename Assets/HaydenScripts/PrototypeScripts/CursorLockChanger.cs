@@ -4,7 +4,7 @@ public class CursorLockChanger : MonoBehaviour
 {
     [SerializeField] private bool lockCursor;
 
-    private void OnLevelWasLoaded(int level)
+    private void Start()
     {
         Cursor.lockState = lockCursor ? CursorLockMode.Locked : CursorLockMode.None;
     }
