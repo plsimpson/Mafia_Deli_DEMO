@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5294952221970988065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 98825075372946012}
+  - component: {fileID: 8826801471315127729}
+  m_Layer: 0
+  m_Name: Tutorial Orderr Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &98825075372946012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5294952221970988065}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.28833, y: 3.83621, z: -4.49391}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8826801471315127729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5294952221970988065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b8135412bc14243945b490f2c53033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tutorial
+  SandwichOptions:
+  - {fileID: 11400000, guid: 4f8d15f9b6cb8a146b2662ea16d688ab, type: 2}
+  - {fileID: 11400000, guid: 91b1a916f35237a488f0a5180123e67f, type: 2}
+  - {fileID: 11400000, guid: 0ab6ff8c7aa5ba5439a031993fed0fa4, type: 2}
+  - {fileID: 11400000, guid: e03eec724384aab4f8b517bfa3647cf9, type: 2}
+  activeOrder: {fileID: 11400000, guid: 4f8d15f9b6cb8a146b2662ea16d688ab, type: 2}
+  beingBuilt: 
+  text: {fileID: 0}
+  tutorialText: {fileID: 0}
+  tutorialLines: []

@@ -10,7 +10,8 @@ public class Tutorial : MonoBehaviour
     public List<Ingredient> beingBuilt = new List<Ingredient>();
 
     [Header("UI")]
-    [SerializeField] TMP_Text text;
+    [SerializeField] TMP_Text text;               // Order text
+    [SerializeField] TMP_Text tutorialText;       // NEW: Tutorial dialogue text
 
     [Header("Tutorial Dialogue")]
     [TextArea(3, 10)]
@@ -72,7 +73,9 @@ public class Tutorial : MonoBehaviour
     {
         if (dialogueIndex < tutorialLines.Count)
         {
-            Debug.Log(tutorialLines[dialogueIndex]);
+            if (tutorialText != null)
+                tutorialText.text = tutorialLines[dialogueIndex];
+
             dialogueIndex++;
         }
     }
@@ -112,7 +115,6 @@ public class Tutorial : MonoBehaviour
         if (beingBuilt.Contains(newIngredient)) return;
 
         beingBuilt.Add(newIngredient);
-        Debug.Log("Added: " + newIngredient);
 
         // Not complete yet
         if (activeOrder.Ingredients.Count != beingBuilt.Count)
@@ -123,24 +125,21 @@ public class Tutorial : MonoBehaviour
         {
             if (!beingBuilt.Contains(activeOrder.Ingredients[i]))
             {
-                Debug.Log("Bad Order!");
-                PrintNextDialogue(); // print bad order line
+                PrintNextDialogue(); // bad order line
                 beingBuilt.Clear();
                 return;
             }
         }
 
         // GOOD ORDER
-        Debug.Log("Complete!");
-        PrintNextDialogue(); // print good order line
+        PrintNextDialogue(); // good order line
 
         beingBuilt.Clear();
         SandwichOptions.RemoveAt(0);
 
         if (SandwichOptions.Count <= 0)
         {
-            Debug.Log("Level complete");
-            PrintNextDialogue();
+            PrintNextDialogue(); // final line
         }
         else
         {
