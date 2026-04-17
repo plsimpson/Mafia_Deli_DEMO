@@ -10,8 +10,7 @@ public class Tutorial : MonoBehaviour
     public List<Ingredient> beingBuilt = new List<Ingredient>();
 
     [Header("UI")]
-    [SerializeField] TMP_Text text;               // Order text
-    [SerializeField] TMP_Text tutorialText;       // NEW: Tutorial dialogue text
+    [SerializeField] TMP_Text text;
 
     [Header("Tutorial Dialogue")]
     [TextArea(3, 10)]
@@ -73,35 +72,14 @@ public class Tutorial : MonoBehaviour
     {
         if (dialogueIndex < tutorialLines.Count)
         {
-            if (tutorialText != null)
-                tutorialText.text = tutorialLines[dialogueIndex];
-
+            Debug.Log(tutorialLines[dialogueIndex]);
             dialogueIndex++;
         }
     }
 
     private void NewOrder()
     {
-        if (SandwichOptions == null || SandwichOptions.Count == 0)
-        {
-            Debug.LogError("SandwichOptions is empty or null!");
-            return;
-        }
-
         activeOrder = SandwichOptions[0];
-
-        if (activeOrder == null || activeOrder.Ingredients == null)
-        {
-            Debug.LogError("Active order or its ingredients are null!");
-            return;
-        }
-
-        if (text == null)
-        {
-            Debug.LogError("TMP_Text component is not assigned!");
-            return;
-        }
-
         string s = "Order:\n";
 
         foreach (Ingredient ing in activeOrder.Ingredients)
@@ -115,6 +93,7 @@ public class Tutorial : MonoBehaviour
         if (beingBuilt.Contains(newIngredient)) return;
 
         beingBuilt.Add(newIngredient);
+        Debug.Log("Added: " + newIngredient);
 
         // Not complete yet
         if (activeOrder.Ingredients.Count != beingBuilt.Count)
@@ -125,21 +104,24 @@ public class Tutorial : MonoBehaviour
         {
             if (!beingBuilt.Contains(activeOrder.Ingredients[i]))
             {
-                PrintNextDialogue(); // bad order line
+                Debug.Log("Bad Order!");
+                PrintNextDialogue(); // print bad order line
                 beingBuilt.Clear();
                 return;
             }
         }
 
         // GOOD ORDER
-        PrintNextDialogue(); // good order line
+        Debug.Log("Complete!");
+        PrintNextDialogue(); // print good order line
 
         beingBuilt.Clear();
         SandwichOptions.RemoveAt(0);
 
         if (SandwichOptions.Count <= 0)
         {
-            PrintNextDialogue(); // final line
+            Debug.Log("Level complete");
+            PrintNextDialogue();
         }
         else
         {
