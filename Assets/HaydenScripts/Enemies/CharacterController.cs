@@ -14,6 +14,12 @@ public class PlayerController : MonoBehaviour
 
     private float xRotation = 0f;
 
+    // Jump and Gravity Variables
+    public float jumpHeight = 2f; // Height of the jump
+    public float gravity = -9.81f; // Gravity force
+    private float verticalVelocity = 0f; // Vertical velocity for gravity and jumping
+    private bool isGrounded; // Check if the player is grounded
+
     // INPUT CALLBACKS
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -23,6 +29,14 @@ public class PlayerController : MonoBehaviour
     public void OnLook(InputAction.CallbackContext context)
     {
         lookInput = context.ReadValue<Vector2>();
+    }
+
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        if (context.performed && isGrounded)
+        {
+            verticalVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity); // Calculate jump velocity
+        }
     }
 
     void Start()
@@ -36,7 +50,6 @@ public class PlayerController : MonoBehaviour
         HandleLook();
         HandleMovement();
     }
-
 
     void HandleLook()
     {
@@ -52,7 +65,22 @@ public class PlayerController : MonoBehaviour
 
     void HandleMovement()
     {
+        // Check if the player is grounded
+        isGrounded = cc.isGrounded;
+
+        if (isGrounded && verticalVelocity < 0)
+        {
+            verticalVelocity = -2f; // Reset vertical velocity when grounded
+        }
+
+        // Calculate movement
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
-        cc.Move(move * speed * Time.deltaTime);
+
+        // Apply gravity
+        verticalVelocity += gravity * Time.deltaTime;
+
+        // Apply movement and vertical velocity
+        Vector3 velocity = move * speed + Vector3.up * verticalVelocity;
+        cc.Move(velocity * Time.deltaTime);
     }
 }
