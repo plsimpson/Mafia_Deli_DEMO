@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tutorial : MonoBehaviour
 {
     [Header("Sandwich Data")]
-    [SerializeField] private List<Sandwich> SandwichOptions = new List<Sandwich>();
+    [SerializeField] public List<Sandwich> SandwichOptions = new List<Sandwich>();
     [SerializeField] private Sandwich activeOrder;
     public List<Ingredient> beingBuilt = new List<Ingredient>();
 
