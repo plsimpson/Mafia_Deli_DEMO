@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Tutorial : MonoBehaviour
+public class Tutorial : DemoSceneLoader
 {
     [Header("Sandwich Data")]
     [SerializeField] public List<Sandwich> SandwichOptions = new List<Sandwich>();
@@ -97,7 +97,8 @@ public class Tutorial : MonoBehaviour
         {
             if (dialogueText != null)
                 dialogueText.text = "Tutorial Complete!";
-         //   isWaitingForInput = false; // Stop waiting for input after the tutorial ends
+            SceneLoader();
+            //   isWaitingForInput = false; // Stop waiting for input after the tutorial ends
         }
     }
 
