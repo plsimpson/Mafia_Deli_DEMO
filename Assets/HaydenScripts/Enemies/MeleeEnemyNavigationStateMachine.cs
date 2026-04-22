@@ -57,7 +57,7 @@ public class MeleeEnemyNavigationStateMachine : BaseCharacter
     private void UpdateChasing()
     {
         agent.SetDestination(target.position);
-        if (Vector3.Distance(transform.position, target.position) < 1)
+        if (Vector3.Distance(transform.position, target.position) < 2)
         {
             state = EnemyStates.Attacking;
         }
