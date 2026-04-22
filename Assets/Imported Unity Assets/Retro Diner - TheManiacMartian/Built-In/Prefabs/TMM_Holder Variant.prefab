@@ -90,6 +90,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TMM_Holder Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3786427630795383064, guid: 4442b213450f84045b574cb9a4f4db92, type: 3}
+      propertyPath: m_TagString
+      value: Chair
+      objectReference: {fileID: 0}
     - target: {fileID: 4595861241355320226, guid: 4442b213450f84045b574cb9a4f4db92, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -145,13 +149,48 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4595861241355320226, guid: 4442b213450f84045b574cb9a4f4db92, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8467245832775180470}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3786427630795383064, guid: 4442b213450f84045b574cb9a4f4db92, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8031998989974250713}
   m_SourcePrefab: {fileID: 100100000, guid: 4442b213450f84045b574cb9a4f4db92, type: 3}
 --- !u!4 &266504212122689730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4595861241355320226, guid: 4442b213450f84045b574cb9a4f4db92, type: 3}
   m_PrefabInstance: {fileID: 4356413888947805024}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &646548604076931704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3786427630795383064, guid: 4442b213450f84045b574cb9a4f4db92, type: 3}
+  m_PrefabInstance: {fileID: 4356413888947805024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &8031998989974250713
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646548604076931704}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &4921347834858034473
 PrefabInstance:
   m_ObjectHideFlags: 0
