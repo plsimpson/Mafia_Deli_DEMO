@@ -10,6 +10,7 @@ public class GunDamage : MonoBehaviour
         {
             if (Physics.Raycast(playerCamTrans.position, playerCamTrans.forward, out RaycastHit hit))
             {
+                Debug.Log("Hit: " + hit.collider.name);
                 if (hit.collider.TryGetComponent(out MeleeEnemyNavigationStateMachine enemy))
                 {
                     enemy.TakeDamage(10);

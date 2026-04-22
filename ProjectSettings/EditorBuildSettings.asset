@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene Manager.unity
     guid: fc9a5cbb82b223a4fa9c8edf00d8b0e8
   - enabled: 0
@@ -14,12 +14,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Playtest 4-8.unity
     guid: 2b963306ee9235c4fb2ef39f80c63318
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/DeliBuilderScene.unity
     guid: 69c14fefb54958c42b4e659e9e443b03
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Playtest 4-15-26.unity
     guid: 4d2ff9e4693f107479a5f84a2f971598
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 6b8fd30f51130024c97d93f45829f2d7
+  - enabled: 1
+    path: Assets/Scenes/Playtest 4-22-26.unity
+    guid: 03fa6d55da47bc4428aab4c56465719a
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9ba7cf7975424a34187cfd98e3bddf31, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
