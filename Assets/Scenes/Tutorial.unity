@@ -142808,6 +142808,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 124259770}
     - target: {fileID: 8826801471315127729, guid: 8f45d06cb51fb604bbf9bb03c78998e7, type: 3}
+      propertyPath: sceneName
+      value: Playtest 4-22-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8826801471315127729, guid: 8f45d06cb51fb604bbf9bb03c78998e7, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 237184194}
