@@ -10,16 +10,16 @@ public class Tutorial : DemoSceneLoader
     public List<Ingredient> beingBuilt = new List<Ingredient>();
 
     [Header("UI")]
-    [SerializeField] TMP_Text dialogueText; // For tutorial dialogue
-    [SerializeField] TMP_Text orderText;    // For sandwich orders
+    [SerializeField] private TMP_Text dialogueText;
+    [SerializeField] private TMP_Text orderText;
 
     [Header("Tutorial Dialogue")]
     [TextArea(3, 10)]
     public List<string> tutorialLines = new List<string>();
 
     private int dialogueIndex = 0;
-    private bool isWaitingForInput = true; // Wait for spacebar input
-    private bool orderStarted = false;     // Track if sandwich-building system is active
+    private bool isWaitingForInput = true;
+    private bool orderStarted = false;
 
     private void Start()
     {
@@ -29,7 +29,6 @@ public class Tutorial : DemoSceneLoader
 
     private void Update()
     {
-        // Wait for spacebar input to proceed, unless the order system is active
         if (isWaitingForInput && Input.GetKeyDown(KeyCode.Space))
         {
             PrintNextDialogue();
@@ -40,34 +39,27 @@ public class Tutorial : DemoSceneLoader
     {
         tutorialLines = new List<string>()
         {
-            // START SCREEN
             "Start Shift- Welcome to Romano’s Sandwich Shop, we are extremely delighted to add you to the family…",
             "My name’s Luca, I’m the son of Don Romano. Now listen, I know the place isn’t exactly up to code. Word on the street is our other business is doing a little too well. We need to funnel our less-than-legal funds into proper channels. That’s where you come in, make the orders perfectly, and you’ll get some nice dough.",
 
-            // TUTORIAL SANDWICH SEQUENCE
             "Alright, this is your sandwich station.",
             "You got your meats, Ham, salami, gabagool, bacon,",
             "You also got cheese, lettuce, tomato, and onions. Since our old pal Tony was a rat, we don’t carry a lot of cheese anymore.",
             "You also got two dressings: mayo and mustard. Heard some shmuck asking for ketchup the other day. I mean, who likes that?",
 
-            // FIRST CUSTOMER
             "Here comes your first customer.",
             "How you doing boss can I get a Ham, cheese, lettuce, and Mayo?",
 
-            // AFTER FIRST SANDWICH
             "Great Job kid. Here comes another.",
             "Oy, I need a Bacon, Lettuce, Onion, and Mustard right now.",
 
-            // THIRD CUSTOMER
             "Looks suitable. This guy looks like he wants a complicated one.",
             "Alright Pal, I got something to ask you…",
             "May I have a Gabagool lettuce, tomato, cheese, and mustard?",
 
-            // FOURTH CUSTOMER
             "Excellent work, we got one more. Make sure to make this good.",
             "Well, looks like new meat into the family, I need a Salami, cheese, onion with mustard, and pronto, shrimp.",
 
-            // END
             "Well, guess you ain't useless after all."
         };
     }
@@ -76,19 +68,21 @@ public class Tutorial : DemoSceneLoader
     {
         if (dialogueIndex < tutorialLines.Count)
         {
-            // Update the dialogue TMP_Text
-            if (dialogueText != null)
-                dialogueText.text = tutorialLines[dialogueIndex];
+            string line = tutorialLines[dialogueIndex];
 
-            // Trigger sandwich-building system at specific dialogue lines
-            if (tutorialLines[dialogueIndex] == "How you doing boss can I get a Ham, cheese, lettuce, and Mayo?" ||
-                tutorialLines[dialogueIndex] == "Oy, I need a Bacon, Lettuce, Onion, and Mustard right now." ||
-                tutorialLines[dialogueIndex] == "May I have a Gabagool lettuce, tomato, cheese, and mustard?" ||
-                tutorialLines[dialogueIndex] == "Well, looks like new meat into the family, I need a Salami, cheese, onion with mustard, and pronto, shrimp.")
+            if (dialogueText != null)
+                dialogueText.text = line;
+
+            // Disable spacebar ONLY on order lines
+            switch (line)
             {
-               // isWaitingForInput = false; // Disable spacebar input
-                orderStarted = true;      // Enable sandwich-building system
-                NewOrder();
+                case "How you doing boss can I get a Ham, cheese, lettuce, and Mayo?":
+                case "Oy, I need a Bacon, Lettuce, Onion, and Mustard right now.":
+                case "May I have a Gabagool lettuce, tomato, cheese, and mustard?":
+                case "Well, looks like new meat into the family, I need a Salami, cheese, onion with mustard, and pronto, shrimp.":
+                    StartOrder();
+                    isWaitingForInput = false; // disable spacebar
+                    break;
             }
 
             dialogueIndex++;
@@ -97,22 +91,27 @@ public class Tutorial : DemoSceneLoader
         {
             if (dialogueText != null)
                 dialogueText.text = "Tutorial Complete!";
+
             SceneLoader();
-            //   isWaitingForInput = false; // Stop waiting for input after the tutorial ends
         }
+    }
+
+    private void StartOrder()
+    {
+        if (SandwichOptions == null || SandwichOptions.Count == 0)
+        {
+            Debug.LogError("No more sandwich options available.");
+            return;
+        }
+
+        orderStarted = true;
+        activeOrder = SandwichOptions[0];
+        NewOrder();
     }
 
     private void NewOrder()
     {
-        if (!orderStarted) return; // Ensure orders only start after the flag is set
-
-        if (SandwichOptions == null || SandwichOptions.Count == 0)
-        {
-            Debug.LogError("SandwichOptions is empty or null!");
-            return;
-        }
-
-        activeOrder = SandwichOptions[0];
+        if (!orderStarted) return;
 
         if (activeOrder == null || activeOrder.Ingredients == null)
         {
@@ -125,18 +124,20 @@ public class Tutorial : DemoSceneLoader
         foreach (Ingredient ing in activeOrder.Ingredients)
             s += " - " + ing + "\n";
 
-        // Update the order TMP_Text
         if (orderText != null)
             orderText.text = s;
     }
 
     public void AddIngredient(Ingredient newIngredient)
     {
-        if (beingBuilt.Contains(newIngredient)) return;
+        if (!orderStarted || activeOrder == null)
+            return;
+
+        if (beingBuilt.Contains(newIngredient))
+            return;
 
         beingBuilt.Add(newIngredient);
 
-        // Not complete yet
         if (activeOrder.Ingredients.Count != beingBuilt.Count)
             return;
 
@@ -154,19 +155,18 @@ public class Tutorial : DemoSceneLoader
         // GOOD ORDER
         Debug.Log("Complete!");
         beingBuilt.Clear();
-        SandwichOptions.RemoveAt(0);
 
-        if (SandwichOptions.Count <= 0)
-        {
-            Debug.Log("Level complete");
-            isWaitingForInput = true; // Re-enable spacebar input after all orders are complete
-            PrintNextDialogue(); // Progress tutorial after completing the last order
-        }
-        else
-        {
-            NewOrder();
-            PrintNextDialogue(); // Progress tutorial after completing each order
-        }
+        // Remove completed sandwich
+        if (SandwichOptions.Count > 0)
+            SandwichOptions.RemoveAt(0);
+
+        // Re-enable spacebar after finishing an order
+        isWaitingForInput = true;
+        orderStarted = false;
+
+        if (orderText != null)
+            orderText.text = string.Empty;
+
+        PrintNextDialogue();
     }
 }
-

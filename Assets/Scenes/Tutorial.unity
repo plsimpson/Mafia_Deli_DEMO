@@ -100808,6 +100808,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TMM_Holder Variant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5614877931184125007, guid: 5ee69789922de4c42a2438b08a155332, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -142823,6 +142827,26 @@ PrefabInstance:
       propertyPath: orderSprites.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8826801471315127729, guid: 8f45d06cb51fb604bbf9bb03c78998e7, type: 3}
+      propertyPath: SandwichOptions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8826801471315127729, guid: 8f45d06cb51fb604bbf9bb03c78998e7, type: 3}
+      propertyPath: 'SandwichOptions.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 91b1a916f35237a488f0a5180123e67f, type: 2}
+    - target: {fileID: 8826801471315127729, guid: 8f45d06cb51fb604bbf9bb03c78998e7, type: 3}
+      propertyPath: 'SandwichOptions.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 0ab6ff8c7aa5ba5439a031993fed0fa4, type: 2}
+    - target: {fileID: 8826801471315127729, guid: 8f45d06cb51fb604bbf9bb03c78998e7, type: 3}
+      propertyPath: 'SandwichOptions.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 632424b8a92f5e444adb011a1665cfaa, type: 2}
+    - target: {fileID: 8826801471315127729, guid: 8f45d06cb51fb604bbf9bb03c78998e7, type: 3}
+      propertyPath: 'SandwichOptions.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 632424b8a92f5e444adb011a1665cfaa, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
