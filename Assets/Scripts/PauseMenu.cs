@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PauseMenuUI : MonoBehaviour
@@ -7,36 +6,18 @@ public class PauseMenuUI : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameObject pausePanel;
 
-    [Header("Input")]
-    [SerializeField] private InputActionAsset inputActions;
-
-    private InputAction pauseAction;
     public static bool IsPaused = false;
 
-    void Awake()
+    void Update()
     {
-        var map = inputActions.FindActionMap("Player");
-        pauseAction = map.FindAction("Pause");
-    }
-
-    void OnEnable()
-    {
-        pauseAction.Enable();
-        pauseAction.performed += OnPause;
-    }
-
-    void OnDisable()
-    {
-        pauseAction.performed -= OnPause;
-        pauseAction.Disable();
-    }
-
-    private void OnPause(InputAction.CallbackContext ctx)
-    {
-        if (IsPaused)
-            Resume();
-        else
-            Pause();
+        // Press P to toggle pause
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (IsPaused)
+                Resume();
+            else
+                Pause();
+        }
     }
 
     public void Resume()
