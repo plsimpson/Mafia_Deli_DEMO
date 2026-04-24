@@ -9,7 +9,12 @@ public class MeleeEnemyNavigationStateMachine : BaseCharacter
     [SerializeField] EnemyStates state;
     //Get a reference to a script with an enemy count float
 
+    [SerializeField] private float attackRange = 2f;
+
     private float reloadTime;
+
+    [SerializeField] private PlayerHealth playerHealth;
+    //Get a reference to the player's health script
 
     public enum EnemyStates
     {
@@ -50,6 +55,24 @@ public class MeleeEnemyNavigationStateMachine : BaseCharacter
     private void UpdateAttacking()
     {
         Debug.Log("Attack");
+
+        RaycastHit hit;
+
+        Vector3 origin = transform.position + Vector3.up * 1f; // chest height
+        Vector3 direction = transform.forward;
+        float radius = 0.5f;
+
+        // Debug visualization
+        Debug.DrawRay(origin, direction * attackRange, Color.red, 0.5f);
+
+        if (Physics.SphereCast(origin, radius, direction, out hit, attackRange))
+        {
+            if (hit.collider.TryGetComponent(out PlayerHealth playerHealth))
+            {
+                playerHealth.TakeDamage();
+            }
+        }
+
         state = EnemyStates.Reload;
         reloadTime = 1f;
     }
@@ -57,7 +80,7 @@ public class MeleeEnemyNavigationStateMachine : BaseCharacter
     private void UpdateChasing()
     {
         agent.SetDestination(target.position);
-        if (Vector3.Distance(transform.position, target.position) < 2)
+        if (Vector3.Distance(transform.position, target.position) < 5)
         {
             state = EnemyStates.Attacking;
         }

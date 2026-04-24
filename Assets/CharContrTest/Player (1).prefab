@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5729902679887852271}
   - component: {fileID: -4392045103009752939}
   - component: {fileID: 3637279928964178892}
+  - component: {fileID: 8482879620282987034}
   m_Layer: 0
   m_Name: Player (1)
   m_TagString: Untagged
@@ -324,6 +325,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GunDamage
   playerCamTrans: {fileID: 1300510441493286591}
+  bulletTrails: {fileID: 6669122325175767846}
+--- !u!114 &8482879620282987034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597209269647670601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd97ca10ec4f97941a48b3a54a9e4b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  sceneName: GameOver
+  healthIcons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1841002420368183446
 GameObject:
   m_ObjectHideFlags: 0
