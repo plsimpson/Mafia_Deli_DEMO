@@ -36054,7 +36054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d11a4165403c6bb4ba77250a77d4575e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DemoLoadSceneOnOrdersComplete
-  sceneName: Playtest_4-27-26
+  sceneName: EndScreen
   OrderController: {fileID: 1559498677}
 --- !u!4 &511096062
 Transform:
