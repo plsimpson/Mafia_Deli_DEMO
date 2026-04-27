@@ -5,33 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Scene Manager.unity
-    guid: fc9a5cbb82b223a4fa9c8edf00d8b0e8
-  - enabled: 0
-    path: Assets/Scenes/Demo.unity
-    guid: 6b847378bf2804544848173c48767679
-  - enabled: 0
-    path: Assets/Scenes/Playtest 4-8.unity
-    guid: 2b963306ee9235c4fb2ef39f80c63318
-  - enabled: 0
-    path: Assets/Scenes/DeliBuilderScene.unity
-    guid: 69c14fefb54958c42b4e659e9e443b03
-  - enabled: 0
-    path: Assets/Scenes/Playtest 4-15-26.unity
-    guid: 4d2ff9e4693f107479a5f84a2f971598
   - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
-    guid: 6b8fd30f51130024c97d93f45829f2d7
-  - enabled: 0
-    path: Assets/Scenes/Playtest 4-22-26.unity
-    guid: 03fa6d55da47bc4428aab4c56465719a
+    path: Assets/Scenes/Playtest 4-27-26/StartScreen.unity
+    guid: dcadacb3534b91d4db3cb4e0a5303c95
   - enabled: 1
-    path: Assets/Scenes/Playtest 4-27-26/Playtest_4-27-26.unity
+    path: Assets/Scenes/Playtest 4-27-26/Tutorial_Playtest.unity
+    guid: ab143536133ed1d4da871731838dba0d
+  - enabled: 1
+    path: Assets/Scenes/Playtest 4-27-26/Playtest 4-27-26.unity
     guid: 3cbfd0c6821ada141ad6757560b74253
   - enabled: 1
     path: Assets/Scenes/Playtest 4-27-26/DeliBuilderScene_Playtest.unity
     guid: 1f2e7acdcd48cbf4babb8c7883124b4f
+  - enabled: 1
+    path: Assets/Scenes/Playtest 4-27-26/EndScreen.unity
+    guid: e901c40f1a2414b4f995abee3b09594b
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9ba7cf7975424a34187cfd98e3bddf31, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
