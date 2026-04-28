@@ -39,7 +39,7 @@ public class Tutorial : DemoSceneLoader
     {
         tutorialLines = new List<string>()
         {
-            "Start Shift- Welcome to Romano’s Sandwich Shop, we are extremely delighted to add you to the family…",
+            "Welcome to Tony Romano’s Sandwich Shop, we are extremely delighted to add you to the family…",
             "My name’s Luca, I’m the son of Don Romano. Now listen, I know the place isn’t exactly up to code. Word on the street is our other business is doing a little too well. We need to funnel our less-than-legal funds into proper channels. That’s where you come in, make the orders perfectly, and you’ll get some nice dough.",
 
             "Alright, this is your sandwich station.",
@@ -60,7 +60,7 @@ public class Tutorial : DemoSceneLoader
             "Excellent work, we got one more. Make sure to make this good.",
             "Well, looks like new meat into the family, I need a Salami, cheese, onion with mustard, and pronto, shrimp.",
 
-            "Well, guess you ain't useless after all."
+            "Uh oh. Looks like some schmucks are trying to crash the party. Teach em a lesson."
         };
     }
 
@@ -90,7 +90,7 @@ public class Tutorial : DemoSceneLoader
         else
         {
             if (dialogueText != null)
-                dialogueText.text = "Tutorial Complete!";
+                dialogueText.text = "Uh oh. Looks like some schmucks are trying to crash the party. Teach em a lesson.";
 
             SceneLoader();
         }
