@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 892583311311806984, guid: b2f2d6d89a4fcdf43a4a2f3000e27ac9, type: 3}
       propertyPath: m_Name
-      value: RangedEnemy (1) Variant
+      value: RangedEnemy Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 6028932229657294049, guid: b2f2d6d89a4fcdf43a4a2f3000e27ac9, type: 3}
       propertyPath: m_LocalPosition.x
