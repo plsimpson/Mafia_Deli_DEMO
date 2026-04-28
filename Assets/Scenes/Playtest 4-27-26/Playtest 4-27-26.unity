@@ -20916,6 +20916,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: e78fbb694b6e8e54cbd5b29021b190c5, type: 3}
     - target: {fileID: 8482879620282987034, guid: 124d5c166ecd03d41bfe1bb1e627a0ae, type: 3}
+      propertyPath: sceneName
+      value: LoseScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482879620282987034, guid: 124d5c166ecd03d41bfe1bb1e627a0ae, type: 3}
       propertyPath: 'healthIcons.Array.data[0]'
       value: 
       objectReference: {fileID: 4057563111136156042}
