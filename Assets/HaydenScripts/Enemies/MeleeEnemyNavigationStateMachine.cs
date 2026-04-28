@@ -16,12 +16,27 @@ public class MeleeEnemyNavigationStateMachine : BaseCharacter
     [SerializeField] private PlayerHealth playerHealth;
     //Get a reference to the player's health script
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip attackSfx; // assignable in Inspector
+    private AudioSource audioSource;
+
     public enum EnemyStates
     {
         Idle,
         Chasing,
         Attacking,
         Reload
+    }
+
+    private void Start()
+    {
+        // Ensure an AudioSource exists to play the assigned clip
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+        }
     }
 
     private void Update()
@@ -61,6 +76,12 @@ public class MeleeEnemyNavigationStateMachine : BaseCharacter
         Vector3 origin = transform.position + Vector3.up * 1f; // chest height
         Vector3 direction = transform.forward;
         float radius = 0.5f;
+
+        // Play attack sound if assigned
+        if (attackSfx != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(attackSfx);
+        }
 
         // Debug visualization
         Debug.DrawRay(origin, direction * attackRange, Color.red, 0.5f);

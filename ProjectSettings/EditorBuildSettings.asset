@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Playtest 4-27-26/DeliBuilderScene_Playtest.unity
     guid: 1f2e7acdcd48cbf4babb8c7883124b4f
   - enabled: 1
+    path: Assets/Scenes/Playtest 4-27-26/LoseScreen.unity
+    guid: d39f247165e3c0f45866c7f3bad15d64
+  - enabled: 1
     path: Assets/Scenes/Playtest 4-27-26/EndScreen.unity
     guid: e901c40f1a2414b4f995abee3b09594b
   m_configObjects:

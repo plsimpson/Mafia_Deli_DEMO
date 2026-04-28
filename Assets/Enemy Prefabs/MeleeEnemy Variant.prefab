@@ -104,6 +104,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 57775243387706831, guid: caae34c5acf9a174b8b2f80bd47e5a6b, type: 3}
+      propertyPath: attackSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: aa2b1b757bc7ef041874c68bb4001d93, type: 3}
+    - target: {fileID: 57775243387706831, guid: caae34c5acf9a174b8b2f80bd47e5a6b, type: 3}
       propertyPath: characterRenderer
       value: 
       objectReference: {fileID: 6510616026641603332}

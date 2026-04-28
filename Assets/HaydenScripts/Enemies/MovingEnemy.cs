@@ -26,6 +26,11 @@ public class MovingEnemy : BaseCharacter
     [SerializeField] private float aimTime = 1f;
     [SerializeField] private float reloadTime = 2f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip attackSfx; // assignable in Inspector
+    [SerializeField] private AudioClip aimingSfx; // assignable in Inspector for aiming state
+    private AudioSource audioSource;
+
     private float aimTimer;
     private float reloadTimer;
 
@@ -50,6 +55,14 @@ public class MovingEnemy : BaseCharacter
         maxZ = transform.position.z + distanceOffsetZ;
 
         state = EnemyState.Idle;
+
+        // Ensure an AudioSource exists to play the assigned clips
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+        }
     }
 
     void Update()
@@ -119,6 +132,12 @@ public class MovingEnemy : BaseCharacter
 
                 // Store player's position before waiting to fire
                 storedPlayerPosition = playerTransform.position;
+
+                // Play aiming sound once when entering aiming state
+                if (aimingSfx != null && audioSource != null)
+                {
+                    audioSource.PlayOneShot(aimingSfx);
+                }
             }
         }
     }
@@ -141,6 +160,12 @@ public class MovingEnemy : BaseCharacter
     {
         Vector3 origin = shootOrigin.position;
         Vector3 direction = (storedPlayerPosition - origin).normalized;
+
+        // Play attack sound if assigned
+        if (attackSfx != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(attackSfx);
+        }
 
         RaycastHit hit;
 
