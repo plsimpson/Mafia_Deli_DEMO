@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 72410632}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Counter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13632,6 +13632,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prop_KitchenTable_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8158876301931766383, guid: 8c31604f61cdc3e4288c7e7dfe0e4e08, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8823104072678553813, guid: 8c31604f61cdc3e4288c7e7dfe0e4e08, type: 3}
       propertyPath: m_LocalScale.x
       value: -2
@@ -22937,7 +22941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a434538768b414dabfc6525e8c6830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DemoLoadSceneOnRaycastHitCounter
-  sceneName: 
+  sceneName: DeliBuilderScene_Playtest
 --- !u!4 &1841375452
 Transform:
   m_ObjectHideFlags: 0

@@ -113,6 +113,12 @@ public class MovingEnemy : BaseCharacter
             {
                 state = EnemyState.Aiming;
                 aimTimer = aimTime;
+
+                // Look at player while aiming
+                transform.LookAt(playerTransform);
+
+                // Store player's position before waiting to fire
+                storedPlayerPosition = playerTransform.position;
             }
         }
     }
@@ -122,12 +128,6 @@ public class MovingEnemy : BaseCharacter
         HandleMovement();
 
         if (playerTransform == null) return;
-
-        // Look at player while aiming
-        transform.LookAt(playerTransform);
-
-        // Store player's position before waiting to fire
-        storedPlayerPosition = playerTransform.position;
 
         aimTimer -= Time.deltaTime;
 
@@ -185,5 +185,10 @@ public class MovingEnemy : BaseCharacter
         Debug.Log("Enemy Destroyed!");
         base.Die();
         Destroy(gameObject);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(storedPlayerPosition, 1);
     }
 }
