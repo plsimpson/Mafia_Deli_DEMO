@@ -13,6 +13,8 @@ public class BaseCharacter : MonoBehaviour
 
     private Coroutine flashCoroutine;
 
+    public EnemyCount enemyCount;
+
     void Start()
     {
         //save original color
@@ -61,5 +63,6 @@ public class BaseCharacter : MonoBehaviour
     protected virtual void Die()
     {
         Debug.Log("Character Died");
+        enemyCount.CurrentEnemyCount -= 1;
     }
 }
