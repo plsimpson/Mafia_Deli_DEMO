@@ -39,7 +39,8 @@ public class Tutorial : DemoSceneLoader
     {
         tutorialLines = new List<string>()
         {
-            "Welcome to Tony Romano’s Sandwich Shop, we are extremely delighted to add you to the family…",
+            "Welcome to Tony Romano’s Sandwich Shop, we are extremely delighted to add you to the family… " +
+            "Press Space to Continue.",
             "My name’s Luca, I’m the son of Don Romano. Now listen, I know the place isn’t exactly up to code. Word on the street is our other business is doing a little too well. We need to funnel our less-than-legal funds into proper channels. That’s where you come in, make the orders perfectly, and you’ll get some nice dough.",
 
             "Alright, this is your sandwich station.",
