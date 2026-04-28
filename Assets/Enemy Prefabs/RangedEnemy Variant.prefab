@@ -102,7 +102,7 @@ PrefabInstance:
     - target: {fileID: 214054621067010357, guid: 03f549687826f3d46997eff8118f6db9, type: 3}
       propertyPath: playerTransform
       value: 
-      objectReference: {fileID: 6028932229657294049}
+      objectReference: {fileID: 3322188857083122042, guid: 124d5c166ecd03d41bfe1bb1e627a0ae, type: 3}
     - target: {fileID: 214054621067010357, guid: 03f549687826f3d46997eff8118f6db9, type: 3}
       propertyPath: characterRenderer
       value: 
