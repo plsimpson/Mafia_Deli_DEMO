@@ -100,6 +100,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 214054621067010357, guid: 03f549687826f3d46997eff8118f6db9, type: 3}
+      propertyPath: aimingSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 1a2c357040a04224887d72c9fd92dd7f, type: 3}
+    - target: {fileID: 214054621067010357, guid: 03f549687826f3d46997eff8118f6db9, type: 3}
+      propertyPath: attackSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 27818e4026cc992479d9a4a0480369c5, type: 3}
+    - target: {fileID: 214054621067010357, guid: 03f549687826f3d46997eff8118f6db9, type: 3}
       propertyPath: playerTransform
       value: 
       objectReference: {fileID: 3322188857083122042, guid: 124d5c166ecd03d41bfe1bb1e627a0ae, type: 3}
