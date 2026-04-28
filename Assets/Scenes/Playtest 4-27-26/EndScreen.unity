@@ -203,7 +203,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 635272206}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_TargetAssemblyTypeName: EndMenu, Assembly-CSharp
         m_MethodName: OnQuitButton
         m_Mode: 1
         m_Arguments:
@@ -282,12 +282,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1807667014}
+  m_Father: {fileID: 710081089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -15, y: -110}
-  m_SizeDelta: {x: 60, y: -70}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &437271001
 MonoBehaviour:
@@ -640,9 +640,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 635272201}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64388ef73a53afd408ebcbaa05a41bf7, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ff15a6aaadefe241830e1c0900e885c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Menu
+  m_EditorClassIdentifier: Assembly-CSharp::EndMenu
 --- !u!1 &710081088
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,7 +673,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 437271000}
   m_Father: {fileID: 1807667014}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -726,7 +727,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 635272206}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_TargetAssemblyTypeName: EndMenu, Assembly-CSharp
         m_MethodName: OnPlayButton
         m_Mode: 1
         m_Arguments:
@@ -1230,11 +1231,10 @@ RectTransform:
   m_LocalScale: {x: 2.23, y: 2.23, z: 2.23}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 710081089}
   - {fileID: 533432585}
   - {fileID: 837548245}
   - {fileID: 1865815567}
-  - {fileID: 710081089}
-  - {fileID: 437271000}
   - {fileID: 182871141}
   m_Father: {fileID: 635272205}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
