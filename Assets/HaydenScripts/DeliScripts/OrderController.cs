@@ -12,6 +12,10 @@ public class OrderController : MonoBehaviour
 
     public float doneTime = 2f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip[] addIngredientSfxs = new AudioClip[8];
+    [SerializeField] [Range(0f, 1f)] private float sfxVolume = 1f;
+
     private void Start()
     {
         NewOrder();
@@ -42,8 +46,31 @@ public class OrderController : MonoBehaviour
         beingBuilt.Add(newIngredient);
         Debug.Log("Added: " + newIngredient);
 
-        // check if complete
         if (!IsOrderComplete()) return;
+
+        if (addIngredientSfxs != null && addIngredientSfxs.Length > 0)
+        {
+            int attempts = addIngredientSfxs.Length;
+            while (attempts-- > 0)
+            {
+                int idx = Random.Range(0, addIngredientSfxs.Length);
+                var clip = addIngredientSfxs[idx];
+                if (clip != null)
+                {
+                    AudioSource.PlayClipAtPoint(clip, transform.position, sfxVolume);
+                    break;
+                }
+            }
+        }
+
+        // Check if complete
+        if (activeOrder.Ingredients.Count != beingBuilt.Count)
+            return;
+        for (int i = 0; i < activeOrder.Ingredients.Count; i++)
+        {
+            if (!beingBuilt.Contains(activeOrder.Ingredients[i]))
+                return;
+        }
 
         Debug.Log("Complete!");
 

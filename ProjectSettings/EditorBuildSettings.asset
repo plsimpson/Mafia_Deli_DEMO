@@ -6,23 +6,32 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Playtest 4-27-26/StartScreen.unity
-    guid: dcadacb3534b91d4db3cb4e0a5303c95
+    path: Assets/Scenes/Final Build/StartScreen_Final.unity
+    guid: f2a58d26348da264d8c83848879efdfc
   - enabled: 1
-    path: Assets/Scenes/Playtest 4-27-26/Tutorial_Playtest.unity
-    guid: ab143536133ed1d4da871731838dba0d
+    path: Assets/Scenes/Final Build/Tutorial_Final.unity
+    guid: d69b3525b8162f3429cba66caf2c9637
   - enabled: 1
-    path: Assets/Scenes/Playtest 4-27-26/Playtest 4-27-26.unity
-    guid: 3cbfd0c6821ada141ad6757560b74253
+    path: Assets/Scenes/Final Build/FightScene1_Final.unity
+    guid: a20c4f1e1630b474e8702e963899705c
   - enabled: 1
-    path: Assets/Scenes/Playtest 4-27-26/DeliBuilderScene_Playtest.unity
-    guid: 1f2e7acdcd48cbf4babb8c7883124b4f
+    path: Assets/Scenes/Final Build/DeliBuilderScene1_Final.unity
+    guid: 8b28b4c7476b1d848a2d93cc56367c09
   - enabled: 1
-    path: Assets/Scenes/Playtest 4-27-26/LoseScreen.unity
-    guid: d39f247165e3c0f45866c7f3bad15d64
+    path: Assets/Scenes/Final Build/FightScene2_Final.unity
+    guid: ad4ea474205090e48a8ae1b5b9f4caed
   - enabled: 1
-    path: Assets/Scenes/Playtest 4-27-26/EndScreen.unity
-    guid: e901c40f1a2414b4f995abee3b09594b
+    path: Assets/Scenes/Final Build/DeliBuilderScene2_Final.unity
+    guid: ca815c2bc7925d9478a069ea7a152423
+  - enabled: 1
+    path: Assets/Scenes/Final Build/FightScene3_Final.unity
+    guid: 3911cc222cb22f4489b50e8ea7177b18
+  - enabled: 1
+    path: Assets/Scenes/Final Build/LoseScreen_Final.unity
+    guid: cce32432f39619e43b76117b10d73286
+  - enabled: 1
+    path: Assets/Scenes/Final Build/EndScreen_Final.unity
+    guid: 8ab7d09fdcbd1704e8f3461f415874e9
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9ba7cf7975424a34187cfd98e3bddf31, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}

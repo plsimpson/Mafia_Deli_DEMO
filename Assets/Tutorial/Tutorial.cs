@@ -14,6 +14,10 @@ public class Tutorial : DemoSceneLoader
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private TMP_Text orderText;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip[] addIngredientSfxs = new AudioClip[8];
+    [SerializeField] [Range(0f, 1f)] private float sfxVolume = 1f;
+
     [Header("Tutorial Dialogue")]
     [TextArea(3, 10)]
     public List<string> tutorialLines = new List<string>();
@@ -142,10 +146,24 @@ public class Tutorial : DemoSceneLoader
 
         beingBuilt.Add(newIngredient);
 
+        // play sound immediately when ingredient is added (before the completion check)
+        if (addIngredientSfxs != null && addIngredientSfxs.Length > 0)
+        {
+            int attempts = addIngredientSfxs.Length;
+            while (attempts-- > 0)
+            {
+                int idx = Random.Range(0, addIngredientSfxs.Length);
+                var clip = addIngredientSfxs[idx];
+                if (clip != null)
+                {
+                    AudioSource.PlayClipAtPoint(clip, transform.position, sfxVolume);
+                    break;
+                }
+            }
+        }
+
         if (activeOrder.Ingredients.Count != beingBuilt.Count)
             return;
-
-        // add sound effect here
 
         // Check correctness
         for (int i = 0; i < activeOrder.Ingredients.Count; i++)
