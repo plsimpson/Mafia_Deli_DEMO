@@ -9014,7 +9014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600558d32c1d64942a8bc2554c62cdef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoadSceneOnTriggerAndEnemyCount
-  sceneName: DeliBuilderScene_Playtest
+  sceneName: EndScreen_Final
   triggerCollider: {fileID: 724686472}
 --- !u!65 &724686472
 BoxCollider:
@@ -12422,9 +12422,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Good work, bub. I knew you were cut out for this. Check out the shop in
-    the back to spend some moolah on new iron. Then head on back to the counter to
-    start your next shift.
+  m_text: 'Holy canoli... I underestimated you kid...
+
+
+    Ya did good for our family.
+    Keep up the good work champ.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ac58059e7393684c8b09de75c1e6cd4, type: 2}
   m_sharedMaterial: {fileID: 6566629776560226995, guid: 1ac58059e7393684c8b09de75c1e6cd4, type: 2}
@@ -24558,70 +24560,6 @@ Mesh:
       - serializedVersion: 1
         m_IndexStart: 0
         m_IndexCount: 0
---- !u!1 &1841375450
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1841375452}
-  - component: {fileID: 1841375451}
-  - component: {fileID: 1841375453}
-  m_Layer: 0
-  m_Name: LoadDeliBuilder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1841375451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1841375450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53a434538768b414dabfc6525e8c6830, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DemoLoadSceneOnRaycastHitCounter
-  sceneName: DeliBuilderScene_Playtest
---- !u!4 &1841375452
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1841375450}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.29389, y: 2.27391, z: -3.34017}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1841375453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1841375450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ad6cb47737b1b44795f1725fa071f9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DemoLoadSceneOnRaycastHitCounter1
-  sceneName: YourSceneName
-  maxDistance: 100
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967291
-  blockIfPointerOverUI: 1
 --- !u!1 &1844344046
 GameObject:
   m_ObjectHideFlags: 0
@@ -31973,7 +31911,6 @@ SceneRoots:
   - {fileID: 1651672090}
   - {fileID: 1188727294}
   - {fileID: 1717668702}
-  - {fileID: 1841375452}
   - {fileID: 724686470}
   - {fileID: 4057563111136156037}
   - {fileID: 471717743}

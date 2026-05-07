@@ -86,7 +86,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HorizonFogDensity: 0.7
+    - _HorizonFogDensity: 2
     - _HorizonHeight: -0.029
     - _HorizonSharpness: 0.5
     - _Metallic: 0
