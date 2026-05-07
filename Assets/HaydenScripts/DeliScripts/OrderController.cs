@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -9,6 +10,8 @@ public class OrderController : MonoBehaviour
     public List<Ingredient> beingBuilt = new List<Ingredient>();
     [SerializeField] TMP_Text text;
 
+    public float doneTime = 2f;
+
     private void Start()
     {
         NewOrder();
@@ -16,7 +19,14 @@ public class OrderController : MonoBehaviour
 
     private void NewOrder()
     {
+        if (SandwichOptions.Count == 0)
+        {
+            Debug.Log("No more sandwiches — level complete");
+            return;
+        }
+
         activeOrder = SandwichOptions[0];
+
         string s = "Order:\n";
         foreach (Ingredient ing in activeOrder.Ingredients)
         {
@@ -27,31 +37,49 @@ public class OrderController : MonoBehaviour
 
     public void AddIngredient(Ingredient newIngredient)
     {
-        // Skip ingredients already on sandwich
         if (beingBuilt.Contains(newIngredient)) return;
 
         beingBuilt.Add(newIngredient);
         Debug.Log("Added: " + newIngredient);
 
-        //add sound effect here
-
-        // Check if complete
-        if (activeOrder.Ingredients.Count != beingBuilt.Count)
-            return;
-        for (int i = 0; i < activeOrder.Ingredients.Count; i++)
-        {
-            if (!beingBuilt.Contains(activeOrder.Ingredients[i]))
-                return;
-        }
+        // check if complete
+        if (!IsOrderComplete()) return;
 
         Debug.Log("Complete!");
+
+        text.text = "Complete!\n+ $20";
+        PlayerInventory.Money += 20;
+
+        StartCoroutine(NextOrderDelay());
+    }
+
+    private bool IsOrderComplete()
+    {
+        if (beingBuilt.Count != activeOrder.Ingredients.Count)
+            return false;
+
+        foreach (Ingredient ing in activeOrder.Ingredients)
+        {
+            if (!beingBuilt.Contains(ing))
+                return false;
+        }
+
+        return true;
+    }
+
+    private IEnumerator NextOrderDelay()
+    {
+        yield return new WaitForSeconds(2f);
+
         beingBuilt.Clear();
         SandwichOptions.RemoveAt(0);
+
         if (SandwichOptions.Count <= 0)
         {
             Debug.Log("Level complete");
+            yield break;
         }
-        else
-            NewOrder();
+
+        NewOrder();
     }
 }

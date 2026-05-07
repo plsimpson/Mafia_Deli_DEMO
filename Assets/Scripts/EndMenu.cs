@@ -4,6 +4,8 @@ public class EndMenu: MonoBehaviour
 {
     public void OnPlayButton ()
     {
+        PlayerInventory.Money = 0;
+        PlayerInventory.OwnedItem = null;
         SceneManager.LoadScene(0);
     }
 
