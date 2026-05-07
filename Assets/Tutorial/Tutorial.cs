@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -24,6 +25,8 @@ public class Tutorial : DemoSceneLoader
     private int dialogueIndex = 0;
     private bool isWaitingForInput = true;
     private bool orderStarted = false;
+
+    private float doneTime = 2f;
 
     private void Start()
     {
@@ -175,19 +178,33 @@ public class Tutorial : DemoSceneLoader
 
         // GOOD ORDER
         Debug.Log("Complete!");
+
+        orderText.text = "Complete!\n+ $20";
+        PlayerInventory.Money += 20;
+
+        // start delayed transition
+        StartCoroutine(HandleOrderComplete());
+    }
+
+    private IEnumerator HandleOrderComplete()
+    {
+        // prevent input during transition
+        isWaitingForInput = false;
+        orderStarted = false;
+
+        yield return new WaitForSeconds(doneTime);
+
         beingBuilt.Clear();
 
         // Remove completed sandwich
         if (SandwichOptions.Count > 0)
             SandwichOptions.RemoveAt(0);
 
-        // Re-enable spacebar after finishing an order
-        isWaitingForInput = true;
-        orderStarted = false;
-
         if (orderText != null)
             orderText.text = string.Empty;
 
         PrintNextDialogue();
+
+        isWaitingForInput = true;
     }
 }

@@ -4,10 +4,15 @@ using UnityEngine.UI;
 public abstract class Item : MonoBehaviour
 {
     public int Cost => cost;
-    public RawImage UISprite => uiSprite;
 
     [SerializeField] private int cost;
-    [SerializeField] private RawImage uiSprite;
+
+    [SerializeField] private GameObject weaponUI;
+    public GameObject WeaponUI => weaponUI;
+
+    [SerializeField] private AudioClip shootSound;
+
+    public AudioClip ShootSound => shootSound;
 
     public abstract Equipment Equip(GameObject CharacterGO);
 }
