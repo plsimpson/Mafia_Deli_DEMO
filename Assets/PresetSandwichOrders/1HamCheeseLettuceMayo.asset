@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a80d8b3b10c3b6c47a543cd860e61a44, type: 3}
-  m_Name: CheeseHamSalamiTomatoMayoOnion
+  m_Name: 1HamCheeseLettuceMayo
   m_EditorClassIdentifier: Assembly-CSharp::Sandwich
-  Ingredients: 040000000000000001000000060000000900000007000000
+  Ingredients: 00000000040000000500000009000000
