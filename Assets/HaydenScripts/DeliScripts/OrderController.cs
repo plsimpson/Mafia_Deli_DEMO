@@ -33,6 +33,8 @@ public class OrderController : MonoBehaviour
         beingBuilt.Add(newIngredient);
         Debug.Log("Added: " + newIngredient);
 
+        //add sound effect here
+
         // Check if complete
         if (activeOrder.Ingredients.Count != beingBuilt.Count)
             return;
