@@ -143,10 +143,7 @@ public class Tutorial : DemoSceneLoader
 
         beingBuilt.Add(newIngredient);
 
-        if (activeOrder.Ingredients.Count != beingBuilt.Count)
-            return;
-
-        // add sound effect here - pick a random clip from the 8 assigned slots
+        // play sound immediately when ingredient is added (before the completion check)
         if (addIngredientSfxs != null && addIngredientSfxs.Length > 0)
         {
             int attempts = addIngredientSfxs.Length;
@@ -161,6 +158,9 @@ public class Tutorial : DemoSceneLoader
                 }
             }
         }
+
+        if (activeOrder.Ingredients.Count != beingBuilt.Count)
+            return;
 
         // Check correctness
         for (int i = 0; i < activeOrder.Ingredients.Count; i++)
