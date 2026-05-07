@@ -142,6 +142,8 @@ public class Tutorial : DemoSceneLoader
         if (activeOrder.Ingredients.Count != beingBuilt.Count)
             return;
 
+        // add sound effect here
+
         // Check correctness
         for (int i = 0; i < activeOrder.Ingredients.Count; i++)
         {
