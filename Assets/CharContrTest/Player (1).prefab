@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34535f7c8c7331446a809c9a7987df9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterController
-  speed: 5
+  speed: 7
   mouseSensitivity: 0.25
   cameraTransform: {fileID: 1300510441493286591}
   cc: {fileID: 5729902679887852271}
