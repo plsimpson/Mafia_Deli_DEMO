@@ -28,11 +28,13 @@ public class PlayerGunController : MonoBehaviour
         }
 
         // Add money
+        /*
         if (Input.GetKeyDown(KeyCode.S))
         {
             PlayerInventory.Money += 10;
             Debug.Log("Money: $" + PlayerInventory.Money);
         }
+        */
 
         // Use equipment
         if (Input.GetMouseButton(0))

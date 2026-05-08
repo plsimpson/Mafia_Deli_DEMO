@@ -36118,7 +36118,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.31
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -99755,6 +99755,7 @@ MonoBehaviour:
   activeOrder: {fileID: 0}
   beingBuilt: 
   text: {fileID: 124259770}
+  doneTime: 2
   addIngredientSfxs:
   - {fileID: 8300000, guid: dc3b23127c8838f40b290503f4592b54, type: 3}
   - {fileID: 8300000, guid: 9e9686ac664819441babf542be3080bb, type: 3}

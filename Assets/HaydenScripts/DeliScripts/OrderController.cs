@@ -46,8 +46,7 @@ public class OrderController : MonoBehaviour
         beingBuilt.Add(newIngredient);
         Debug.Log("Added: " + newIngredient);
 
-        if (!IsOrderComplete()) return;
-
+        // Play an add-ingredient SFX immediately when an ingredient is added
         if (addIngredientSfxs != null && addIngredientSfxs.Length > 0)
         {
             int attempts = addIngredientSfxs.Length;
@@ -63,14 +62,7 @@ public class OrderController : MonoBehaviour
             }
         }
 
-        // Check if complete
-        if (activeOrder.Ingredients.Count != beingBuilt.Count)
-            return;
-        for (int i = 0; i < activeOrder.Ingredients.Count; i++)
-        {
-            if (!beingBuilt.Contains(activeOrder.Ingredients[i]))
-                return;
-        }
+        if (!IsOrderComplete()) return;
 
         Debug.Log("Complete!");
 
@@ -96,7 +88,7 @@ public class OrderController : MonoBehaviour
 
     private IEnumerator NextOrderDelay()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(doneTime);
 
         beingBuilt.Clear();
         SandwichOptions.RemoveAt(0);
