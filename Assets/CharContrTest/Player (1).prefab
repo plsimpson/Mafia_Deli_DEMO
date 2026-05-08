@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4637558455748820741}
   - component: {fileID: 792076494489721131}
   - component: {fileID: 1724104352124016233}
+  - component: {fileID: 8312496098798406156}
   m_Layer: 0
   m_Name: Player (1)
   m_TagString: Player
@@ -484,6 +485,29 @@ MonoBehaviour:
   currentShootSound: {fileID: 8300000, guid: e78fbb694b6e8e54cbd5b29021b190c5, type: 3}
   CurrentEquipment: {fileID: 0}
   playerCamTrans: {fileID: 1300510441493286591}
+--- !u!136 &8312496098798406156
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597209269647670601}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1841002420368183446
 GameObject:
   m_ObjectHideFlags: 0

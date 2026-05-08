@@ -92,23 +92,23 @@ Material:
     - _GlossyReflections: 1
     - _GroundPower: 1
     - _HorizonCurvature: 0.1
-    - _HorizonFogDensity: 0
-    - _HorizonHeight: 0
+    - _HorizonFogDensity: 0.13
+    - _HorizonHeight: -0.029
     - _HorizonSharpness: 0.5
     - _Metallic: 0
     - _Mode: 0
-    - _MoonSize: 0.15
+    - _MoonSize: 0.078
     - _OcclusionStrength: 1
     - _Overcast: 0
     - _Parallax: 0.02
     - _SkyExposure: 1
-    - _SkySaturation: 1
+    - _SkySaturation: 1.15
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _StarDensity: 150
     - _StarHeight: -1
-    - _StarIntensity: 0.15
+    - _StarIntensity: 0.201
     - _StarSeed: 465
     - _SunConvergence: 9.12
     - _SunFlareIntensity: 0.1
@@ -128,3 +128,4 @@ Material:
     - _HorizonFogColor: {r: 1, g: 1, b: 1, a: 1}
     - _ZenithColor: {r: 0.041295845, g: 0.11700601, b: 0.3018868, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
